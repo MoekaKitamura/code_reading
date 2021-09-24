@@ -49,7 +49,7 @@
                         <% end %>
                       </td>
                       <td>
-                        <% if @team.owner == current_user || assign.user_id != @team.owner.id %>
+                        <% if @team.owner == current_user %>
                           <%= link_to "権限移動", change_owner_team_path(owner_id: assign.user_id), method: :post, class: 'btn btn-sm btn-primary' %>
                         <% end %>
                       </td>
