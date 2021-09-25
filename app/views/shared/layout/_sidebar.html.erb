@@ -49,6 +49,9 @@
                 <%= link_to new_agenda_article_path(agenda), class: 'nav-link' do %>
                   <p>+ <%= I18n.t('views.messages.create_article') %></p>
                 <% end %>
+                <% if @working_team.owner == current_user || agenda.user_id == current_user.id %>
+                  <%= link_to "× アジェンダを削除する", agenda_path(agenda), method: :delete, class: 'nav-link' %>
+                <% end %>
               </li>
             </ul>
           </li>
