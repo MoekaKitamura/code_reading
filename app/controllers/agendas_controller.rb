@@ -31,5 +31,3 @@ class AgendasController < ApplicationController
     params.fetch(:agenda, {}).permit %i[title description]
   end
 end
-
-#
